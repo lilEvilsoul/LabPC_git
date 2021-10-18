@@ -1,0 +1,16 @@
+#!/bin/bash
+read -p "elige el primer número: " num1
+read -p "elige el segundo número: " num2
+echo
+echo "Qué quieres hacer con los dos números?"
+echo "(1-Addition, 2-Subtraction, 3-Multiplication, 4-Division)"
+read -p "ingresa la opción: " op 
+if [ $op = "1" ]; then
+	echo "$num1 + $num2 = $(($num1 + $num2))"
+elif [ $op = "2" ]; then
+	echo "$num1 - $num2 = $(($num1 - $num2))"
+elif [ $op = "3" ]; then
+	echo "$num1 * $num2 = $(($num1 * $num2))"
+elif [ $op = "4" ]; then
+	echo "$num1 / $num2 = $(($num1 / $num2))"
+fi
