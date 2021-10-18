@@ -1,0 +1,30 @@
+#+TITLE: Bash_powershell
+
+#+BEGIN_SRC bash
+echo "Hola a todos!!" | base64
+#+END_SRC
+
+#+RESULTS:
+: SG9sYSBhIHRvZG9zISEK
+
+#+BEGIN_SRC bash
+echo "Hola a todos!!" | base64 | base64 -d
+#+END_SRC
+
+#+RESULTS:
+: Hola a todos!!
+
+#+BEGIN_SRC bash
+base64 fcfm.png > fcfm_logo_encoded.txt
+
+#+END_SRC
+
+#+RESULTS:
+
+
+#+BEGIN_SRC bash
+base64 -d fcfm_logo_encoded.txt > fcfm_logo_decoded.png
+
+#+END_SRC
+
+#+RESULTS:

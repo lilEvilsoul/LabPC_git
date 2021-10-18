@@ -1,0 +1,8 @@
+#!/bin/bash
+ 
+function busqueda_nmap(){
+	read -p "Ingrese el dominio a scanear: " domain
+	nmap $domain | base64 > info_obtenido.txt
+	nmap --script=http-auth $domain | base64 > mas_informacion_obtenida.txt
+}
+busqueda_nmap()

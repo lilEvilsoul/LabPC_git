@@ -1,0 +1,7 @@
+#!/bin/bash
+
+function obtener_ips(){
+	hostname -I | base64 > ip_publica.txt
+	curl ifconfig.me | base64 > ip_privada.txt
+}
+ obtener_ips
