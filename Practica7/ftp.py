@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 
 from ftplib import FTP, FTP_PORT
@@ -59,7 +60,4 @@ def connect_ftp(
 
 
 if __name__ == "__main__":
-    # http://www.ftp-sites.org/
-    # connect_ftp('192.168.11.3', 8022)
-    connect_ftp(host="ftp.mirror.nl", save_path="/home/juan/Documentos")
-    # connect_ftp(host="ftp.heanet.ie", save_path="/home/jhernandez/txt")
+    connect_ftp(host="ftp.heanet.ie", save_path="/home/juan/Documentos")

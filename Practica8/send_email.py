@@ -5,23 +5,17 @@ import smtplib
 import json
 
 data = {}
-# {
-# "user": "jose.hernandezsal@uanl.edu.mx"
-# "pass": "password_super_secreto"
-# }
-#
-#
 with open("pass.json") as f:
     data = json.load(f)
 # create and setup the parameters of the message
 email_msg = MIMEMultipart()
 email_msg["From"] = data["user"]
-receipents = ["jose.hernandezsal@uanl.edu.mx"]
+receipents = [input("Ingrese el correo deseado: ")]
 email_msg["To"] = ", ".join(receipents)
-email_msg["Subject"] = "Salu2"
+email_msg["Subject"] = input("Ingrese el asunto: ")
 
 # add in the message body
-message = "Enviado desde la clase de los sabados a las 8:30am siendo las 09:16 pm del 16/10/21."
+message = input("Ingrese el mensaje: ")
 email_msg.attach(MIMEText(message, "plain"))
 
 # create server
